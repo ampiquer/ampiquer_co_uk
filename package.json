@@ -1,0 +1,12 @@
+{
+    "name": "ampiquer-com",
+    "author": "Arantxa Martinez Piquer",
+    "version": "0.0.1",
+    "description": "Website ampiquer.com",
+    "scripts": {
+         "start": "serve"
+    },
+    "dependencies": {
+         "serve":"^11.3.2"
+    }
+}
