@@ -388,6 +388,33 @@ size:100%;
     margin-left: 5em;
     background-color: none;
 }
+    .btn {
+    cursor: default !important;
+}
+
+.btn h2 {
+  color: #690077;
+}
+
+
+a img {
+    padding: 1em;
+}
+.gallery-btn p {
+    font-size: 15px;
+    font-weight: bold;
+      color: #690077;
+
+}
+
+.gallery-btn h2 {
+      color: #690077;
+
+}
+
+a:hover {
+    text-decoration: none;
+}
     .btn-row2 {
     margin-top: 5px;
 }
