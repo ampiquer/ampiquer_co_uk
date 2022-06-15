@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+         <!--favicon-->
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <title>Arantxa Martinez Piquer</title>
+
+        <meta name="description" content="Arantxa Martinez Piquer personal page">
+        <meta name="keywords" content="arantxa martinez piquer arantxamartinezpiquer webdesign design web cv art">
+        <meta name="author" content="Arantxa Martinez Piquer">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body><!--header, nav and footer to stay the same in all pages-->
+        <a href="index.html"> <header>
+            <div id="title"><p id="name">ARANTXA</p><p>MARTINEZ PIQUER</p></div>
+            <div id="logo"><img src="img/logo.png" alt="logo"></div>
+        </header></a>
+
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+             <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="P1.html">Project 1</a></li>
+                <li><a href="P2.html">Project 2</a></li>
+                <li><a href="P3.html">Project 3</a></li>
+                <li><a href="P4.html">Project 4</a></li>
+                <li><a href="cv%20and%20facts.html">CV / Fun Facts</a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+        
+        <article class="container">
+            
+            <section class="row">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-block"><h2> Project 1: Cat’s habits helping app </h2></button>
+
+                    
+                </div>
+            </section>
+            <section class="row">
+                <div class="col-sm-3">
+                     <button class="gallery-btn"><img src="img/P1/cat_1.JPG" class="img-responsive"></button>
+                </div>
+                <div class="col-sm-3">
+                     <button class="gallery-btn"><img src="img/P1/cat_2.JPG" class="img-responsive"></button>
+                </div>
+                <div class="col-sm-3">
+                     <button class="gallery-btn"><img src="img/P1/cat_3.JPG" class="img-responsive"></button>
+                </div>
+                 <div class="col-sm-3">
+                     <button class="gallery-btn"><img src="img/P1/cat_4.JPG" class="img-responsive"></button>
+                </div>
+            </section>
+                       
+            
+               <div class="gallery-modal">
+                        <div class="gallery-modal-content">
+                             <span class="gallery-close">&times;</span>
+                        <img src="img/P1/cat_1.JPG" class="img-responsive">
+                      </div>
+                </div>
+            
+                     <div class="gallery-modal">
+                        <div class="gallery-modal-content">
+                             <span class="gallery-close">&times;</span>
+                        <img src="img/P1/cat_2.JPG" class="img-responsive">
+                      </div>
+                </div>
+            
+                     <div class="gallery-modal">
+                        <div class="gallery-modal-content">
+                             <span class="gallery-close">&times;</span>
+                        <img src="img/P1/cat_3.JPG" class="img-responsive">
+                      </div>
+                </div>
+                     <div class="gallery-modal">
+                        <div class="gallery-modal-content">
+                             <span class="gallery-close">&times;</span>
+                        <img src="img/P1/cat_4.JPG" class="img-responsive">
+                      </div>
+                </div>
+            
+            
+             </article>
+        
+         <script>
+            
+                //javascript for the modals
+                     
+                    // Get the modal
+                    var gallery_modalparent = document.getElementsByClassName("gallery-modal");
+
+                    // Get the button that opens the modal
+                    var gallery_btn_multi = document.getElementsByClassName("gallery-btn");
+
+                    // Get the <span> element that closes the modal
+                    var gallery_span_multi = document.getElementsByClassName("gallery-close");
+
+                    // When the user clicks the button, open the modal
+                    function setDataIndex_gallery() {
+
+                    for (i = 0; i < gallery_btn_multi.length; i++)
+                    {
+                        gallery_btn_multi[i].setAttribute('data-index', i);
+                        gallery_modalparent[i].setAttribute('data-index', i);
+                        gallery_span_multi[i].setAttribute('data-index', i);
+                    }
+                    }
+
+                    for (i = 0; i < gallery_btn_multi.length; i++)
+                    {
+                        gallery_btn_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        gallery_modalparent[ElementIndex].style.display = "block";
+                    };
+
+                    // When the user clicks on <span> (x), close the modal
+                    gallery_span_multi[i].onclick = function() {
+                        var ElementIndex = this.getAttribute('data-index');
+                        gallery_modalparent[ElementIndex].style.display = "none";
+                    };
+                    }
+
+                    window.onload = function() {
+
+                        setDataIndex_gallery();
+                    };
+
+                    window.onclick = function(event) {
+                        if (event.target === gallery_modalparent[event.target.getAttribute('data-index')]) {
+                            gallery_modalparent[event.target.getAttribute('data-index')].style.display = "none";
+                    }
+                    };
+                
+                
+            </script>
+
+    </body>
+    <footer>
+        <br><p id="footer">&copy; 2022 - arantxa.martinezpiquer@gmail.com</p>
+
+    </footer>
+</html>
