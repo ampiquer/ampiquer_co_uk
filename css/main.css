@@ -46,11 +46,40 @@ header p {
 }
 nav {
   font-family: 'lucida-handwrite';
-  padding-left: 30%;
+  padding-left: 22%;
   font-size: 25px;
 }
+
+.btn {
+    cursor: default !important;
+}
+
 .btn h2 {
   color: #690077;
+}
+
+.row2 {
+    margin-left: 3em;
+    background-color: none;
+}
+
+a img {
+    padding: 1em;
+}
+.gallery-btn p {
+    font-size: 15px;
+    font-weight: bold;
+      color: #690077;
+
+}
+
+.gallery-btn h2 {
+      color: #690077;
+
+}
+
+a:hover {
+    text-decoration: none;
 }
 .modal-dialog {
   margin-top: 150px;
@@ -102,14 +131,7 @@ footer {
   margin-top: -10px;
 }
 /*css for cv page*/
-#cv-pdf {
-  font-family: 'elephant';
-  color: black;
-  font-size: 50px;
-}
-#cv-pdf:hover {
-  text-decoration: underline;
-}
+
 #desk {
   margin-top: 0;
   position: relative;
@@ -202,6 +224,9 @@ footer {
   animation-duration: 0.6s;
   height: 700px;
 }
+
+
+
 /*this bit is to help with the animation of the zoom out*/
 @-webkit-keyframes zoom {
   from {
@@ -281,8 +306,8 @@ footer {
 .gallery-modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+size:100%;
+  max-width: 1200px;  
 }
 /* Add Animation */
 .gallery-modal-content {
@@ -358,6 +383,14 @@ footer {
   .btn h2 {
     font-size: 15px;
   }
+    
+    .row2 {
+    margin-left: 5em;
+    background-color: none;
+}
+    .btn-row2 {
+    margin-top: 5px;
+}
   .modal-dialog {
     margin-top: 100px;
   }
